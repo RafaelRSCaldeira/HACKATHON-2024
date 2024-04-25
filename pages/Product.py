@@ -20,7 +20,7 @@ st.markdown(footer, unsafe_allow_html=True)
 
 buttons = st.columns(3, gap="medium")
 with buttons[0]:
-    if st.button("Pagina Inicial", type="primary"):
+    if st.button("Página Inicial", type="primary"):
         st.switch_page("Home.py")
 with buttons[1]:
     if st.button("Produto", type="primary"):
@@ -95,17 +95,17 @@ file_path = st.file_uploader("Carregar arquivo CSV", type=['csv'])
 if file_path is not None:
     data = load_data(file_path)
     if data is not None:
-        st.markdown('''<p class="productText">"Dados carregados com sucesso!"</p>''')
-        st.markdown('''<p class="productText">"Dados carregados com sucesso!"</p>''')
+        st.markdown('''<p class="productText">Dados carregados com sucesso!</p>''', unsafe_allow_html=True)
+        st.markdown('''<p class="productText">Exemplo dos dados:</p>''', unsafe_allow_html=True)
         st.write(data.head())
 
         with st.spinner("Processando dados..."):
             flows = process_data(data)
 
-        st.markdown('''<p class="productText">"Desenhando diagrama de fluxo de informações..."</p>''')
+        st.markdown('''<p class="productText">Desenhando diagrama de fluxo de informações...</p>''', unsafe_allow_html=True)
         image = draw_flow_diagram(flows)
         st.image(image, use_column_width=True)
-        download_name = st_keyup("Digite o nome do arquivo")
-        st.write
+        download_name = st_keyup("Digite o nome do arquivo que deseja baixar")
+        st.markdown('''<p class="productText">Para melhor visualização, faça o download em PDF</p>''', unsafe_allow_html=True)
         st.markdown(get_download_links(image, download_name), unsafe_allow_html=True)
 

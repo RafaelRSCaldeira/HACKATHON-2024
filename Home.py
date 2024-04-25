@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(initial_sidebar_state="collapsed", page_title="Fluxo de Aplicações", page_icon=":chart_with_upwards_trend:")
+st.set_page_config(initial_sidebar_state="collapsed", page_title="Página inicial", page_icon="🏠")
 
 with open("style.css") as file:
     st.markdown(f"<style>{file.read()}</style>", unsafe_allow_html=True)
@@ -14,7 +14,7 @@ st.markdown(footer, unsafe_allow_html=True)
 
 buttons = st.columns(3, gap="medium")
 with buttons[0]:
-    if st.button("Pagina Inicial", type="primary"):
+    if st.button("Página Inicial", type="primary"):
         st.switch_page("Home.py")
 with buttons[1]:
     if st.button("Produto", type="primary"):

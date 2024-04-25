@@ -1,5 +1,5 @@
 .stButton > button {
-  background-color: #262626;
+  background-color: #F2F2F2;
   border-radius: 24px;
   color: #ff9c0a;
   font-family: "Google Sans",Roboto,Arial,sans-serif;
@@ -14,9 +14,9 @@
   max-width: fit-content;
   max-height: 100%;
   &:hover {
-    background-color: #F2F2F2;
+    background-color: #e9e7ee;
     color: #262626;
-    border-bottom: 4px solid darken(#F2F2F2, 10%);
+    border-bottom: 4px solid darken(#e9e7ee, 10%);
   }
 }
 
@@ -61,7 +61,7 @@
     text-align: center;
     font-weight: 100;
     font-family: "Google Sans",Roboto,Arial,sans-serif;
-    margin-right: 10%;
+    margin-right: 0%;
     margin-left: 0%;
     left: 45%;
     top: 30%;
@@ -108,11 +108,11 @@
 .leftColumn {
     position: absolute;
     width: 35vw;
-    height: 200vh;
+    height: 280vh;
     margin-left: -80%;
     margin-top: 20%;
-    background: rgb(16,16,16);
-    background: linear-gradient(180deg, rgba(16,16,16,1) 0%, rgba(48,48,48,1) 54%);
+    background: rgb(48,48,48);
+    background: linear-gradient(0deg, rgba(48,48,48,1) 0%, rgba(212,142,39,1) 90%);
 }
 
 .rightColumn {
@@ -121,8 +121,8 @@
     height: 200vh;
     margin-left: 5%;
     margin-top: 20%;
-    background: rgb(16,16,16);
-    background: linear-gradient(180deg, rgba(16,16,16,1) 0%, rgba(48,48,48,1) 54%);
+    background: rgb(48,48,48);
+    background: linear-gradient(0deg, rgba(48,48,48,1) 0%, rgba(212,142,39,1) 90%);
 }
 
 .leftDescription {
@@ -160,18 +160,52 @@
     background-color: #0018ed;
 }
 
-.aboutUsTitle {
+.aboutUsTitleLeft {
     display: flex;
+    color: #F2F2F2;
     justify-content: center;
+    align-items: center;
+    margin-left: -82%;
+    margin-top: 30%;
+    font-size: 400%;
+    padding: 0%;
+    font-family: "Nunito","Google Sans",Roboto,Arial,sans-serif;
+}
+
+.aboutUsTitleRight {
+    display: absolute;
+    color: #F2F2F2;
+    justify-content: center;
+    align-items: center;
+    margin-left: 68%;
+    margin-top: 30%;
+    font-size: 400%;
+    padding: 0%;
+    font-family: "Nunito","Google Sans",Roboto,Arial,sans-serif;
+    width: 100vw;
+}
+
+.aboutUsDescriptionLeft {
+    text-align: justify;
+    display: flex;
+    margin-left: -53%;
+    width: 24vw;
+    font-size: 120%;
+    color: #F2F2F2;
     align-items: center;
 }
 
-#element-container {
-    background-color: #0018ed;
+.aboutUsDescriptionRight {
+    text-align: justify;
+    display: flex;
+    margin-left: 33%;
+    width: 24vw;
+    font-size: 120%;
+    color: #F2F2F2;
+    align-items: center;
 }
 
 .productText {
-    font-size: large;
-    color: #262626;
-    background-color: #0018ed;
+    font-size: 150%;
+    font-family: "Nunito","Google Sans",Roboto,Arial,sans-serif;
 }
