@@ -23,12 +23,10 @@ with col1:
 with col2:
     st.markdown('''
     <p class="titleBanner"> Desafio HACKATHON</br>:hiperstream</p>
-    ''', unsafe_allow_html=True)
-    st.markdown('''
     <p class="descriptionBanner">DESENHO DE FLUXO DE APLICAÇÕES</p>
     ''', unsafe_allow_html=True)
 
-buttons = st.columns(3)
+buttons = st.columns(3, gap="medium")
 with buttons[0]:
     if st.button("Pagina Inicial", type="primary"):
         st.switch_page("Home.py")

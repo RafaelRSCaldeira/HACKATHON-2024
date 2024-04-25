@@ -17,7 +17,7 @@ footer = '''
 '''
 st.markdown(footer, unsafe_allow_html=True)
 
-buttons = st.columns(3)
+buttons = st.columns(3, gap="medium")
 with buttons[0]:
     if st.button("Pagina Inicial", type="primary"):
         st.switch_page("Home.py")
@@ -88,8 +88,8 @@ def get_download_links(img_bytes):
     href_pdf = f'<a href="data:application/pdf;base64,{base64.b64encode(pdf_bytes.getvalue()).decode()}" download="fluxograma.pdf">Download PDF</a>'
 
     return href_png + " | " + href_pdf
-with st.container(border=True):
-    file_path = st.file_uploader("Carregar arquivo CSV", type=['csv'])
+
+file_path = st.file_uploader("Carregar arquivo CSV", type=['csv'])
 
 if file_path is not None:
     data = load_data(file_path)
