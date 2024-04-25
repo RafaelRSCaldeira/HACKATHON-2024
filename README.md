@@ -191,4 +191,25 @@ Gerenciador de pacotes pip instalado
 	Este comando retornará ao ambiente Python padrão do seu sistema.
 
 
+# GRAPHLIZ
 
+Para instalar Graphviz no seu computador com Windows e utilizar em seus projetos, siga estes passos:
+
+1. **Baixe o instalador**: Acesse o site oficial do Graphviz em https://www.graphviz.org/download/ e faça o download do instalador adequado para a sua versão do Windows (32 ou 64 bits).
+
+2. **Execute o instalador**: Após o download, execute o arquivo baixado. Isso iniciará o assistente de instalação do Graphviz.
+
+3. **Siga as instruções**: Durante o processo de instalação, você será guiado por um assistente. Siga as instruções na tela, aceitando os termos de licença e escolhendo as opções padrão, a menos que saiba especificamente o que deseja alterar.
+
+4. **Conclua a instalação**: Após a instalação, o Graphviz estará disponível no seu computador.
+
+5. **Adicione o Graphviz ao PATH (opcional)**: Para usar o Graphviz de qualquer diretório no prompt de comando, é útil adicionar o diretório onde o Graphviz foi instalado ao PATH do sistema. Isso permite que o sistema operacional encontre os executáveis do Graphviz sem precisar especificar o caminho completo toda vez. Aqui está como fazer isso:
+
+   - Vá para as configurações avançadas do sistema (pode ser encontrado nas configurações do sistema ou pesquisando no menu Iniciar por "Editar as variáveis de ambiente do sistema").
+   - Clique em "Variáveis de ambiente".
+   - Na seção "Variáveis do sistema", encontre a variável chamada "Path" e selecione-a.
+   - Clique em "Editar".
+   - Na janela de configuração, clique em "Novo" e adicione o diretório onde o Graphviz foi instalado. Por padrão, isso geralmente é algo como "C:\Program Files\Graphviz\bin".
+   - Clique em "OK" para fechar todas as janelas de configuração.
+
+Depois de seguir esses passos, o Graphviz estará instalado e pronto para ser usado em seus projetos. Você pode usar os comandos do Graphviz diretamente no prompt de comando ou integrá-los em seus scripts ou programas conforme necessário.
