@@ -7,17 +7,17 @@ Um código em Python foi desenvolvido com o propósito de criar um programa capa
 
 Neste projeto, foram empregadas as seguintes bibliotecas:
 
-    1. Streamlit: Utilizada para a construção de interfaces web de forma simples e intuitiva, o Streamlit facilita a criação de aplicativos interativos em Python.
+1. Streamlit: Utilizada para a construção de interfaces web de forma simples e intuitiva, o Streamlit facilita a criação de aplicativos interativos em Python.
 
-    2. Pandas: Uma biblioteca de análise de dados amplamente utilizada em Python, o Pandas oferece estruturas de dados poderosas e ferramentas para manipulação e análise eficiente de conjuntos de dados.
+2. Pandas: Uma biblioteca de análise de dados amplamente utilizada em Python, o Pandas oferece estruturas de dados poderosas e ferramentas para manipulação e análise eficiente de conjuntos de dados.
 
-    3. Base64: Essa biblioteca é empregada para a codificação e decodificação de dados binários em ASCII, sendo comumente utilizada para representar dados binários de forma segura em formato de texto.
+3. Base64: Essa biblioteca é empregada para a codificação e decodificação de dados binários em ASCII, sendo comumente utilizada para representar dados binários de forma segura em formato de texto.
 
-    4. Graphviz: Uma ferramenta utilizada para visualização de grafos e redes, o Graphviz oferece recursos para representação visual de estruturas de dados complexas, como fluxogramas e diagramas.
+4. Graphviz: Uma ferramenta utilizada para visualização de grafos e redes, o Graphviz oferece recursos para representação visual de estruturas de dados complexas, como fluxogramas e diagramas.
 
-    5. IO: A biblioteca IO fornece classes e funções para trabalhar com operações de entrada e saída em Python, possibilitando a manipulação de fluxos de dados, arquivos e objetos.
+5. IO: A biblioteca IO fornece classes e funções para trabalhar com operações de entrada e saída em Python, possibilitando a manipulação de fluxos de dados, arquivos e objetos.
 
-    6. PIL (Python Imaging Library): Também conhecida como Pillow, essa biblioteca é utilizada para o processamento de imagens em Python, oferecendo uma ampla gama de funcionalidades para manipulação e edição de imagens digitais
+6. PIL (Python Imaging Library): Também conhecida como Pillow, essa biblioteca é utilizada para o processamento de imagens em Python, oferecendo uma ampla gama de funcionalidades para manipulação e edição de imagens digitais
 
 
 # CÓDIGO
