@@ -162,7 +162,7 @@ Gerenciador de pacotes pip instalado
 	Este comando retornará ao ambiente Python padrão do seu sistema.
 
 
-# GRAPHLIZ
+# GRAPHVIZ
 
 Para instalar Graphviz no seu computador com Windows e utilizar em seus projetos, siga estes passos:
 
@@ -184,3 +184,17 @@ Para instalar Graphviz no seu computador com Windows e utilizar em seus projetos
    - Clique em "OK" para fechar todas as janelas de configuração.
 
 Depois de seguir esses passos, o Graphviz estará instalado e pronto para ser usado em seus projetos. Você pode usar os comandos do Graphviz diretamente no prompt de comando ou integrá-los em seus scripts ou programas conforme necessário.
+
+# INSTRUÇÕES PARA ABRIR O SITE LOCALMENTE
+
+Para abrir o site localmente em seu navegador, siga estas etapas:
+
+1. **Baixe o arquivo .zip** disponível no repositório.
+
+2. **Extraia-o para uma pasta**.
+
+3. **Instale as bibliotecas necessárias** utilizando o método descrito acima ou o método de sua preferência. Preste atenção especial à biblioteca **GRAPHVIZ**, pois costuma apresentar dificuldades durante a instalação, especialmente para usuários do Windows.
+
+4. **Execute o comando `streamlit run <caminho_do_arquivo_Home.py>`**.
+
+Após concluir esses passos, o seu navegador padrão deverá exibir a página inicial do site.
