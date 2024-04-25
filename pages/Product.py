@@ -5,7 +5,7 @@ import base64
 from PIL import Image
 import io
 
-st.set_page_config(initial_sidebar_state="collapsed", page_title="Fluxo de Informação", page_icon=":chart_with_upwards_trend:")
+st.set_page_config(initial_sidebar_state="collapsed", page_title="Fluxo de Aplicações", page_icon=":chart_with_upwards_trend:")
 
 with open("style.css") as file:
     st.markdown(f"<style>{file.read()}</style>", unsafe_allow_html=True)
