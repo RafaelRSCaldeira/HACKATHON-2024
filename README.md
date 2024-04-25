@@ -3,7 +3,7 @@
 Um código em Python foi desenvolvido com o propósito de criar um programa capaz de receber um arquivo em formato CSV e convertê-lo em um fluxograma. Inicialmente, o programa realiza o tratamento dos dados contidos no arquivo, para posteriormente realizar a conversão destes em uma representação visual por meio de uma imagem de fluxograma.
 
 
-# BILIOTECAS UTILIZADAS
+# BIBLIOTECAS UTILIZADAS
 
 Neste projeto, foram empregadas as seguintes bibliotecas:
 
@@ -19,12 +19,15 @@ Neste projeto, foram empregadas as seguintes bibliotecas:
 
 6. PIL (Python Imaging Library): Também conhecida como Pillow, essa biblioteca é utilizada para o processamento de imagens em Python, oferecendo uma ampla gama de funcionalidades para manipulação e edição de imagens digitais
 
+7. St_keyup: Extensão da biblioteca Streamlit e permite colocar espaços para a entrada de usuários que se atualizam automaticamente.
+
 
 # CÓDIGO
 
 **BIBLIOTECAS**
 
 	import streamlit as st
+ 	from st_keyup import st_keyup
 	import pandas as pd 
 	from graphviz import Digraph 
 	import base64 
@@ -32,7 +35,7 @@ Neste projeto, foram empregadas as seguintes bibliotecas:
 	import io 
 
 
-**FUNÇÃO PARA VERIFICAR SE DA PARA LER O ARQUIVO:**
+**FUNÇÃO PARA VERIFICAR SE É POSSÍVEL LER UM ARQUIVO:**
 
 Essa função tem como propósito realizar uma verificação preliminar para determinar se é possível ler o arquivo especificado.
 
@@ -69,9 +72,9 @@ Essa função é responsável por processar e manipular os dados, aplicando as o
 	    return flows
 
 
-**FUNÇÃO PARA ORDEM:**
+**FUNÇÃO PARA ORDENAÇÃO:**
 
-Essa função é responsável por coordenar a ordem dos elementos, incluindo origens, destinos e backups, implementando uma lógica eficaz para a organização coerente dos fluxos. Após a organização lógica dos fluxos, a função utiliza a biblioteca Graphviz para gerar e plotar o gráfico correspondente, proporcionando uma representação visual clara e compreensível dos fluxos de dados.
+Essa função é responsável por ordenar os elementos, incluindo origens, destinos e backups, implementando uma lógica eficaz para a organização coerente dos fluxos. Após a organização lógica dos fluxos, a função utiliza a biblioteca Graphviz para gerar e plotar o gráfico correspondente, proporcionando uma representação visual clara e compreensível dos fluxos de dados.
 
 	def draw_flow_diagram(flows): 
 	    dot = Digraph(format='png')
@@ -93,35 +96,6 @@ Essa função é responsável por coordenar a ordem dos elementos, incluindo ori
 	    return dot.pipe()
 
 
-**FUNÇÃO QUE VAI CHAMAR TODAS AS OUTRAS FUNÇÕES:**
-
-Esta função atua como o ponto central do processo, coordenando e invocando todas as outras funções necessárias para executar as etapas do fluxo de trabalho
-
-	def main():
-	    st.set_page_config(page_title="Fluxo de Informação", page_icon=":chart_with_upwards_trend:")
-	
-	    st.title('Fluxo de Informação entre Pastas')
-	
-	    file_path = st.file_uploader("Carregar arquivo CSV", type=['csv'])
-	
-	    if file_path is not None:
-	        data = load_data(file_path)
-	        if data is not None:
-	            st.write("Dados carregados com sucesso!")
-	            
-	            st.write("Exemplo dos dados:")
-	            st.write(data.head())
-	
-	            with st.spinner("Processando dados..."):
-	                flows = process_data(data)
-	
-	            st.write("Desenhando diagrama de fluxo de informações...")
-	            image = draw_flow_diagram(flows)
-	            st.image(image, use_column_width=True)
-	
-	            st.markdown(get_download_links(image), unsafe_allow_html=True)
-
-
 **FUNÇÃO DE EXPORTAÇÃO DO ARQUIVO:**
 
 Esta função tem como finalidade exportar o arquivo processado, disponibilizando links para download nos formatos PDF e PNG.
@@ -137,9 +111,6 @@ Esta função tem como finalidade exportar o arquivo processado, disponibilizand
 	    href_pdf = f'<a href="data:application/pdf;base64,{base64.b64encode(pdf_bytes.getvalue()).decode()}" download="fluxograma.pdf">Download PDF</a>'
 	
 	    return href_png + " | " + href_pdf
-	
-	if __name__ == "__main__": 
-	    main()
 
 
 # ENV
