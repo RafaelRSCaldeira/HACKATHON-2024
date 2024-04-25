@@ -34,6 +34,8 @@ Neste projeto, foram empregadas as seguintes bibliotecas:
 
 **FUNÇÃO PARA VERIFICAR SE DA PARA LER O ARQUIVO:**
 
+Essa função tem como propósito realizar uma verificação preliminar para determinar se é possível ler o arquivo especificado.
+
 	@st.cache_data #tratamento de dados
 	def load_data(file_path):
 	    try:
@@ -45,6 +47,8 @@ Neste projeto, foram empregadas as seguintes bibliotecas:
 
 
 **FUNÇÃO PARA O TRATAMENTO DE DADOS:**
+
+Essa função é responsável por processar e manipular os dados, aplicando as operações necessárias para prepará-los para análise ou visualização.
 
 	def process_data(data): #tratamento de dados
 	    flows = {}
@@ -65,7 +69,8 @@ Neste projeto, foram empregadas as seguintes bibliotecas:
 	    return flows
 
 
-**FUNÇÃO PARA ORDEM: **
+**FUNÇÃO PARA ORDEM:**
+
 Essa função é responsável por coordenar a ordem dos elementos, incluindo origens, destinos e backups, implementando uma lógica eficaz para a organização coerente dos fluxos. Após a organização lógica dos fluxos, a função utiliza a biblioteca Graphviz para gerar e plotar o gráfico correspondente, proporcionando uma representação visual clara e compreensível dos fluxos de dados.
 
 	def draw_flow_diagram(flows): 
@@ -88,7 +93,9 @@ Essa função é responsável por coordenar a ordem dos elementos, incluindo ori
 	    return dot.pipe()
 
 
-**FUNÇÃO QUE VAI CHAMAR TODAS AS OUTRAS FUNÇÕES**
+**FUNÇÃO QUE VAI CHAMAR TODAS AS OUTRAS FUNÇÕES:**
+
+Esta função atua como o ponto central do processo, coordenando e invocando todas as outras funções necessárias para executar as etapas do fluxo de trabalho
 
 	def main():
 	    st.set_page_config(page_title="Fluxo de Informação", page_icon=":chart_with_upwards_trend:")
@@ -115,7 +122,9 @@ Essa função é responsável por coordenar a ordem dos elementos, incluindo ori
 	            st.markdown(get_download_links(image), unsafe_allow_html=True)
 
 
-**FUNÇÃO PARA EXPORTAR O AQRQUIVO, DISPONIBILIZA O DOWNLOAD LINK EM PDF E EM PNG**
+**FUNÇÃO DE EXPORTAÇÃO DO ARQUIVO:**
+
+Esta função tem como finalidade exportar o arquivo processado, disponibilizando links para download nos formatos PDF e PNG.
 
 	def get_download_links(img_bytes): 
 	    """Gerar links para download em PDF e PNG."""
