@@ -1,4 +1,5 @@
 import streamlit as st
+from st_keyup import st_keyup
 import pandas as pd
 from graphviz import Digraph
 import base64
@@ -75,17 +76,17 @@ def draw_flow_diagram(flows):
 
     return dot.pipe()
 
-def get_download_links(img_bytes):
+def get_download_links(img_bytes, name):
     """Gerar links para download em PDF e PNG."""
     img = Image.open(io.BytesIO(img_bytes))
 
     
-    href_png = f'<a href="data:image/png;base64,{base64.b64encode(img_bytes).decode()}" download="flowchart.png">Download PNG</a>'
+    href_png = f'<a href="data:image/png;base64,{base64.b64encode(img_bytes).decode()}" download="{name}.png">Download PNG</a>'
 
     
     pdf_bytes = io.BytesIO()
     img.save(pdf_bytes, format='PDF')
-    href_pdf = f'<a href="data:application/pdf;base64,{base64.b64encode(pdf_bytes.getvalue()).decode()}" download="fluxograma.pdf">Download PDF</a>'
+    href_pdf = f'<a href="data:application/pdf;base64,{base64.b64encode(pdf_bytes.getvalue()).decode()}" download="{name}.pdf">Download PDF</a>'
 
     return href_png + " | " + href_pdf
 
@@ -94,17 +95,17 @@ file_path = st.file_uploader("Carregar arquivo CSV", type=['csv'])
 if file_path is not None:
     data = load_data(file_path)
     if data is not None:
-        st.write("Dados carregados com sucesso!")
-        
-        st.write("Exemplo dos dados:")
+        st.markdown('''<p class="productText">"Dados carregados com sucesso!"</p>''')
+        st.markdown('''<p class="productText">"Dados carregados com sucesso!"</p>''')
         st.write(data.head())
 
         with st.spinner("Processando dados..."):
             flows = process_data(data)
 
-        st.write("Desenhando diagrama de fluxo de informações...")
+        st.markdown('''<p class="productText">"Desenhando diagrama de fluxo de informações..."</p>''')
         image = draw_flow_diagram(flows)
         st.image(image, use_column_width=True)
-
-        st.markdown(get_download_links(image), unsafe_allow_html=True)
+        download_name = st_keyup("Digite o nome do arquivo")
+        st.write
+        st.markdown(get_download_links(image, download_name), unsafe_allow_html=True)
 
