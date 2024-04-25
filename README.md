@@ -19,7 +19,7 @@ Neste projeto, foram empregadas as seguintes bibliotecas:
 
 6. PIL (Python Imaging Library): Também conhecida como Pillow, essa biblioteca é utilizada para o processamento de imagens em Python, oferecendo uma ampla gama de funcionalidades para manipulação e edição de imagens digitais
 
-7. St_keyup: Extensão da biblioteca Streamlit e permite colocar espaços para a entrada de usuários que se atualizam automaticamente.
+7. St_keyup: Extensão da biblioteca Streamlit e permite colocar espaços que se atualizam automaticamente para a entrada de usuários. 
 
 
 # CÓDIGO
