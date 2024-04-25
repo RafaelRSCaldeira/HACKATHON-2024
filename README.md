@@ -140,3 +140,55 @@ Esta função tem como finalidade exportar o arquivo processado, disponibilizand
 	
 	if __name__ == "__main__": 
 	    main()
+
+
+# ENV
+**Criando e Instalando um Ambiente Python usando requirements.txt**
+
+Este README fornece um guia passo a passo sobre como criar e instalar um ambiente Python usando um arquivo requirements.txt. Esse processo garante que as dependências do seu projeto sejam gerenciadas de forma eficiente.
+
+**Pré-requisitos:**
+Python instalado no seu sistema (versão 3.x recomendada)
+Gerenciador de pacotes pip instalado
+
+**Passos:**
+
+1. Criar um Ambiente Virtual (Opcional, mas Recomendado): É uma boa prática isolar as dependências do seu projeto usando um ambiente virtual. Isso evita conflitos entre diferentes projetos. Para criar um ambiente virtual, abra o seu terminal ou prompt de comando e navegue até o diretório do seu projeto. Em seguida, execute o seguinte comando:
+
+	    py -m venv env
+   
+	Este comando criará uma pasta chamada env no diretório do seu projeto, contendo um interpretador Python e uma cópia da biblioteca padrão.
+
+
+3. Ativar o Ambiente Virtual (Pule se Não Estiver Usando um Ambiente Virtual): Ativar o ambiente virtual garantirá que todos os comandos Python e pip subsequentes sejam executados dentro deste ambiente isolado. Para ativar o ambiente virtual, execute o comando apropriado com base no seu sistema operacional:
+
+	Windows:
+
+    	env\Scripts\activate
+   
+	Unix ou MacOS:
+
+   	 	source env/bin/activate
+   
+
+5. Instalar Dependências do requirements.txt:Agora, você usará o gerenciador de pacotes pip para instalar todas as dependências listadas no arquivo requirements.txt. Certifique-se de que o arquivo requirements.txt esteja presente no diretório do seu projeto. Execute o seguinte comando:
+
+	    pip install -r requirements.txt
+   
+	Este comando lerá o arquivo requirements.txt e instalará cada dependência listada nele, juntamente com suas respectivas versões.
+
+
+7. Verificar a Instalação:Após o término do processo de instalação, você pode verificar se todas as dependências foram instaladas corretamente executando:
+
+	    pip list
+   
+	Este comando exibirá uma lista de pacotes instalados juntamente com suas versões. Você deve ver os pacotes listados no seu arquivo requirements.txt entre eles.
+
+
+9. Desativar o Ambiente Virtual (Se Utilizado):Depois de terminar o trabalho no seu projeto, você pode desativar o ambiente virtual executando:
+
+	    deactivate
+	Este comando retornará ao ambiente Python padrão do seu sistema.
+
+
+
