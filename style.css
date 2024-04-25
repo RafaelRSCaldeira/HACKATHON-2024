@@ -107,9 +107,9 @@
 
 .leftColumn {
     position: absolute;
-    width: 35vw;
+    width: 30vw;
     height: 280vh;
-    margin-left: -80%;
+    margin-left: -70%;
     margin-top: 20%;
     background: rgb(48,48,48);
     background: linear-gradient(0deg, rgba(48,48,48,1) 0%, rgba(212,142,39,1) 90%);
@@ -117,9 +117,9 @@
 
 .rightColumn {
     position: absolute;
-    width: 35vw;
+    width: 30vw;
     height: 200vh;
-    margin-left: 5%;
+    margin-left: 15%;
     margin-top: 20%;
     background: rgb(48,48,48);
     background: linear-gradient(0deg, rgba(48,48,48,1) 0%, rgba(212,142,39,1) 90%);
