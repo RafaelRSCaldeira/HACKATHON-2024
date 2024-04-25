@@ -28,7 +28,10 @@ with buttons[2]:
 columns = st.columns(2)
 with columns[0]:
     st.markdown("<div class='leftColumn'></div>", unsafe_allow_html=True)
-    st.markdown("<p class='leftDescription'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet justo egestas, rutrum tortor ac, varius erat. Morbi sed ligula placerat, laoreet nisi vitae, feugiat odio.</br>Nam nec mi dui. Maecenas sodales turpis sed lectus aliquet tristique. Ut euismod sed urna sit amet accumsan. Pellentesque ligula mauris, vulputate eu nunc vitae, vulputate cursus nibh. Pellentesque sed facilisis massa, eu laoreet nunc. Curabitur finibus lacus at odio cursus, id mattis diam pretium. </br></br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet justo egestas, rutrum tortor ac, varius erat. Morbi sed ligula placerat, laoreet nisi vitae, feugiat odio.</br>Nam nec mi dui. Maecenas sodales turpis sed lectus aliquet tristique. Ut euismod sed urna sit amet accumsan. Pellentesque ligula mauris, vulputate eu nunc vitae, vulputate cursus nibh. Pellentesque sed facilisis massa, eu laoreet nunc. Curabitur finibus lacus at odio cursus, id mattis diam pretium. </br></br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet justo egestas, rutrum tortor ac, varius erat. Morbi sed ligula placerat, laoreet nisi vitae, feugiat odio.</br>Nam nec mi dui. Maecenas sodales turpis sed lectus aliquet tristique. Ut euismod sed urna sit amet accumsan. Pellentesque ligula mauris, vulputate eu nunc vitae, vulputate cursus nibh. Pellentesque sed facilisis massa, eu laoreet nunc. Curabitur finibus lacus at odio cursus, id mattis diam pretium.</p>", unsafe_allow_html=True)
+    st.markdown('''
+                <p class="aboutUsTitle"> Alice</p>
+                <p class="aboutUsTitle"> Fábio (Fabão)</p></br>
+                ''', unsafe_allow_html=True)
 
 with columns[1]:
     st.markdown("<div class='rightColumn'></div>", unsafe_allow_html=True)

@@ -106,48 +106,72 @@
 }
 
 .leftColumn {
-    position: fixed;
-    width: 30vw;
-    height: 80vh;
-    left: 15%;
-    top: 18%;
+    position: absolute;
+    width: 35vw;
+    height: 200vh;
+    margin-left: -80%;
+    margin-top: 20%;
     background: rgb(16,16,16);
     background: linear-gradient(180deg, rgba(16,16,16,1) 0%, rgba(48,48,48,1) 54%);
 }
 
 .rightColumn {
-    position: fixed;
-    width: 30vw;
-    height: 80vh;
-    left: 50%;
-    top: 18%;
+    position: absolute;
+    width: 35vw;
+    height: 200vh;
+    margin-left: 5%;
+    margin-top: 20%;
     background: rgb(16,16,16);
     background: linear-gradient(180deg, rgba(16,16,16,1) 0%, rgba(48,48,48,1) 54%);
 }
 
 .leftDescription {
     position: relative;
-    margin-left: -50%;
-    margin-top: 50%;
+    margin-left: -40%;
+    margin-top: 80%;
     width: 100%;
     text-align: justify;
+    font-size: larger;
 }
 
 .rightDescription {
     position: relative;
-    margin-left: 25%;
+    margin-left: 45%;
     margin-top: 50%;
     width: 100%;
     text-align: justify;
+    font-size: larger;
 }
 
 .stFileUploaderDropzone {
-    background-color: #33343d;
+    background-color: #0018ed;
     padding: 10px;
 }
 
 .stWidgetLabel {
-    position: fixed;
+    position: absolute;
     margin-top: 50%;
     background-color: #000000;
+}
+
+.stImage > img{
+    position: absolute;
+    height: 80vw;
+    background-color: #0018ed;
+}
+
+.aboutUsTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#element-container {
+    background-color: #0018ed;
+}
+
+.productText {
+    font-size: large;
+    color: #262626;
+    background-color: #0018ed;
 }
